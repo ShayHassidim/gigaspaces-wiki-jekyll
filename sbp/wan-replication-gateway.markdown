@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  WAN Replication Gateway
+title:  WAN Gateway Multi-Master Replication example
 parent: wan-based-deployment.html
 categories: SBP
 weight: 100
@@ -9,7 +9,7 @@ weight: 100
 
 
 {% tip %}
-**Summary:** {% excerpt %}WAN Replication Gateway example.{% endexcerpt %}<br/>
+**Summary:** {% excerpt %}WAN Gateway Multi-Master Replication example.{% endexcerpt %}<br/>
 **Author**: Shay Hassidim, Deputy CTO GigaSpaces<br/>
 **Recently tested with GigaSpaces version**: XAP 8.0.3<br/>
 
@@ -37,9 +37,11 @@ The internal architecture of the setup includes a clustered space and a Gateway,
 
 # Installing the Example
 
-Step 1. Download the [WAN_Gateway_example.zip](/attachment_files/sbp/WAN_Gateway_example.zip). It includes two folders: **deploy** and **scripts**.
+Step 1. 
+Download the [WAN_Gateway_example.zip](/attachment_files/sbp/WAN_Gateway_example.zip). It includes two folders: **deploy** and **scripts**.
 
-Step 2. Please extract the file and and copy the content of the **deploy folder** into `\gigaspaces-xap-premium-{%latestxaprelease%}-ga\deploy` folder. It should looks like this:
+Step 2. 
+Extract the file and and **copy** the content of the **deploy folder** into `\gigaspaces-xap-premium-{%latestxaprelease%}-ga\deploy` folder. It should looks like this:
 
 {% highlight java %}
 Directory of D:\gigaspaces-xap-premium-{%latestxaprelease%}-ga\deploy
@@ -55,7 +57,11 @@ Directory of D:\gigaspaces-xap-premium-{%latestxaprelease%}-ga\deploy
 09/11/2011  04:42 AM    <DIR>          wan-space-US
 {% endhighlight %}
 
-Step 3. Please move into the `scripts` folder and edit the `setExampleEnv.bat/sh` to include correct values for `NIC_ADDR` as the machine IP and `GS_HOME` to have Gigaspaces root folder location.
+
+- The `templates` folder should be part of the **deploy** folder prior you copy the `wan-space-XX` and `wan-gateway-XX` folders. 
+
+Step 3. 
+Move into the `scripts` folder and edit the `setExampleEnv.bat/sh` to include correct values for `NIC_ADDR` as the machine IP and `GS_HOME` to have GigaSpaces root folder location.
 
 # Running the Example
 You will find within the `scripts` folder running scripts to start [Grid Service Agent]({%latestjavaurl%}/service-grid.html#gsa) for each site and a deploy script for all sites. This will allow you to run the entire setup on one machine to test. Here are the steps to run the example:
