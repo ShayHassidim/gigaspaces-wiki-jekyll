@@ -1,5 +1,4 @@
 
-
 {% summary page%}
 Global HTTP Session Sharing allows transparent session replication between remote sites and session sharing between different application servers in real-time. The solution uses the [Shiro Session Manager library](http://shiro.apache.org/session-management.html)
 {% endsummary %}
@@ -26,9 +25,6 @@ It's becoming increasingly important for organizations to share HTTP session dat
 
 
 http://www.slideboom.com/presentations/631622/Global-Http-Session-Sharing-V2
-
-
-
 
 <div style="width:425px;text-align:left"><a style="font:14px Helvetica,Arial,Sans-serif;color: #0000CC;display:block;margin:12px 0 3px 0;text-decoration:underline;" href="//www.slideboom.com/presentations/631622/Global-Http-Session-Sharing-V2" title="Global Http Session Sharing">Global Http Session Sharing</a><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="425" height="370" id="onlinePlayer631622"><param name="movie" value="//www.slideboom.com/player/player.swf?id_resource=631622" /><param name="allowScriptAccess" value="always" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><param name="allowFullScreen" value="true" /><param name="flashVars" value="" /><embed src="//www.slideboom.com/player/player.swf?id_resource=631622" width="425" height="370" name="onlinePlayer631622" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer"allowScriptAccess="always" quality="high" bgcolor="#ffffff" allowFullScreen="true" flashVars="" ></embed></object><div style="font-size:11px;font-family:tahoma,arial;height:26px;padding-top:2px;">View <a href="" style="color: #0000CC;">more presentations</a> or <a href="/upload" style="color: #0000CC;">Upload</a> your own.</div></div>
 
@@ -215,7 +211,7 @@ aopalliance-1.0.jar, commons-beanutils-1.8.3.jar, commons-collections-2.1.1.jar,
 
 To deploy the IMDG start the GigaSpaces agent using the `gs-agent` and run the following:
 
-		gs deploy-space sessionSpace
+gs deploy-space sessionSpace
 
 {% tip %}See the [deploy-space]({%latestjavaurl%}/deploy-space-gigaspaces-cli.html) command for details.{% endtip %}
 
@@ -229,28 +225,33 @@ The [WAN Gateway]({%latestjavaurl%}/multi-site-replication-over-the-wan.html) sh
 
 There are cases when applications store session data which is not defined as serializable. To support non-serializable session data you can configure the session manager to serializable session to XML by defining following parameter in `shiro.ini` file mentioned above,
 
-
-		# Session serializationType - JAVA/XML (default JAVA)
-		cacheManager.serializationType = XML
+{%highlight%}
+# Session serializationType - JAVA/XML (default JAVA)
+cacheManager.serializationType = XML
+{%endhighlight%}
 
 Session manager uses XStream libraries for serializing session data to XML. XStream serialization can be further customized, application can configure GigaSpaces session manager to use Refection Converter for Externalizable classes and register custom converters. Following two parameters in `shiro.ini` file can help in customizing serialization,
 
-		# When using Externalizable classes with customized serialization and want to stick to serialization based on Reflection enable this option
-		# Default value is false
-		# cacheManager.registerReflectionConverter = true
+# When using Externalizable classes with customized serialization and want to stick to serialization based on Reflection enable this option
+{%highlight%}
+# Default value is false
+cacheManager.registerReflectionConverter = true
 
-		# List of XStream converters that application would like to register
-		# (Expecting that these are part of classpath or WEB-INF/lib)
-		# Pass them comma separated
-		# cacheManager.converterNameList = org.openspaces.xtreme.converter.XmlCalendarConverter
+# List of XStream converters that application would like to register
+# (Expecting that these are part of classpath or WEB-INF/lib)
+# Pass them comma separated
+cacheManager.converterNameList = org.openspaces.xtreme.converter.XmlCalendarConverter
+{%endhighlight%}
 
 ##### Secured GigaSpaces cluster
 
 When using a [Secure GigaSpaces cluster]({%latestjavaurl%}/securing-your-data.html) you can pass security credentials using following parameters in `shiro.ini` file,
 
-		# When using secured GigaSpace cluster, pass the credentials here
-		# cacheManager.username = gs
-		# cacheManager.password = gs
+{%highlight%}
+# When using secured GigaSpace cluster, pass the credentials here
+cacheManager.username = gs
+cacheManager.password = gs
+{%endhighlight%}
 
 # Http Session Web Application Example
 
@@ -292,37 +293,41 @@ Another option would be to use a load-balancer such as the [apache httpd](http:/
 1. Create a file named `HttpSession.conf` located at <Apache HTTPD 2.2 root>\conf\gigaspaces
 1. Place the following within the `HttpSession.conf` file. The `BalancerMember` should be mapped to different URLs of your web servers instances. With the example below we have Tomcat using port 8080 and Websphere using port 9080.
 
-		<VirtualHost *:8888>
-		  ProxyPass / balancer://HttpSession_cluster/
-		  ProxyPassReverse / balancer://HttpSession_cluster/
+{%highlight%}
+<VirtualHost *:8888>
+  ProxyPass / balancer://HttpSession_cluster/
+  ProxyPassReverse / balancer://HttpSession_cluster/
 
-		  <Proxy balancer://HttpSession_cluster>
-		    BalancerMember http://127.0.0.1:8080 route=HttpSession_1
-		    BalancerMember http://127.0.0.1:9080 route=HttpSession_2
-		  </Proxy>
-		</VirtualHost>
+  <Proxy balancer://HttpSession_cluster>
+     BalancerMember http://127.0.0.1:8080 route=HttpSession_1
+     BalancerMember http://127.0.0.1:9080 route=HttpSession_2
+  </Proxy>
+</VirtualHost>
+{%endhighlight%}
 
 {% note %} The `127.0.0.1` IP should be replaced with IP addresses of the machine(s)/port(s) of WebSphere/Tomcat instances.{% endnote %}
 
 1. Configure the `<Apache2.2 HTTPD root>\conf\httpd.conf` to have the following:
 
-		Include "/tools/Apache2.2/conf/gigaspaces/*.conf"
+{%highlight%}
+Include "/tools/Apache2.2/conf/gigaspaces/*.conf"
 
-		LoadModule proxy_module modules/mod_proxy.so
-		LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
-		LoadModule proxy_http_module modules/mod_proxy_http.so
-		LoadModule status_module modules/mod_status.so
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+LoadModule status_module modules/mod_status.so
 
-		Listen 127.0.0.1:8888
+Listen 127.0.0.1:8888
 
-		ProxyPass /balancer !
-		<Location /balancer-manager>
-		SetHandler balancer-manager
+ProxyPass /balancer !
+<Location /balancer-manager>
+	SetHandler balancer-manager
 
-		Order deny,allow
-		Deny from all
-		Allow from 127.0.0.1
-		</Location>
+	Order deny,allow
+	Deny from all
+	Allow from 127.0.0.1
+</Location>
+{%endhighlight%}
 
 {% note %}The `/tools/Apache2.2` folder name should be replaced with your correct Apache httpd location. \\ The `127.0.0.1` IP should be replaced with appropriate IP addresses of the machine that is running apache.{% endnote %}
 
@@ -331,9 +336,13 @@ Another option would be to use a load-balancer such as the [apache httpd](http:/
 {% indent %}![httpSessionSharing7.jpg](/attachment_files/httpSessionSharing7.jpg){% endindent %}
 
 1. Once you performed the above steps, access the following URL:
+{%highlight%}
 http://127.0.0.1:8888/HttpSession
+{%endhighlight%}
 You should have the web application running. Any access to the web application will be routed between Websphere and Tomcat. You can check this by accessing the Apache httpd balancer console:
+{%highlight%}
 http://127.0.0.1:8888/balancer-manager
+{%endhighlight%}
 
 {% indent %}![httpSessionSharing6.jpg](/attachment_files/httpSessionSharing6.jpg){% endindent %}
 
@@ -341,25 +350,28 @@ You can shutdown Websphere or Tomcat and later restart these. Your web applicati
 
 ### Multi-Site Deployment
 
-When deploying the [multi-site example](/sbp/wan-replication-gateway.html) you should change the `shiro.ini` for each site to match the local site Space URL. For example,
-to connect to the DE space you should have the web application use a `shiro.ini` with the following:
+When deploying the [multi-site example](/sbp/wan-replication-gateway.html) you should change the `shiro.ini` for each site to match the local site Space URL. For example, to connect to the DE space you should have the web application use a `shiro.ini` with the following:
 
-		sessionDAO.activeSessionsCacheName = jini://*/*/wanSpaceDE?useLocalCache&groups=DE
+{%highlight%}
+sessionDAO.activeSessionsCacheName = jini://*/*/wanSpaceDE?groups=DE
+{%endhighlight%}
 
 To connect to the US space you should have the web application use a `shiro.ini` with the following:
 
-		sessionDAO.activeSessionsCacheName = jini://*/*/wanSpaceUS?useLocalCache&groups=US
+{%highlight%}
+sessionDAO.activeSessionsCacheName = jini://*/*/wanSpaceUS?groups=US
+{%endhighlight%}
 
-# Other Considerations
+# Considerations
 
-##### Web Application Context
+## Web Application Context
 
 Global HTTP session sharing works only when your application is deployed as a non-root context. It is relying on browser cookies for identifying user session, specifically JSESSIONID cookie. Cookies are generated at a context name per host level. This way all the links on the page are referring to the same cookie/user session.
 
-##### WebSphere Application Server HttpSessionIdReuse Custom Property
+## WebSphere Application Server HttpSessionIdReuse Custom Property
 
 When using the Global HTTP session sharing with WebSphere Application Server , please enable the [HttpSessionIdReuse](http://pic.dhe.ibm.com/infocenter/wasinfo/v7r0/index.jsp?topic=%2Fcom.ibm.websphere.express.doc%2Finfo%2Fexp%2Fae%2Frprs_custom_properties.html) custom property. In a multi-JVM environment that is not configured for session persistence setting this property to true enables the session manager to use the same session information for all of a user's requests even if the Web applications that are handling these requests are governed by different JVMs.
 
-##### Transient Attribute
+## Transient Attribute
 
 An attribute specified as *transient* would not be shared and its content will not be stored within the IMDG. Your code should be modified to have this as a regular attribute that can be serialized.
