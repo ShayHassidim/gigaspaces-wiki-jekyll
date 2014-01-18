@@ -25,6 +25,8 @@ The web application itself is a pure, JEE based, web application. The applicatio
 
 The web container used behind the scenes is [Jetty](http://www.eclipse.org/jetty/) (with other containers coming in the near future). This page will list the common usage and configuration of web containers. Jetty specific configuration and usage can be found [here](./web-jetty-processing-unit-container.html).
 
+<iframe width="640" height="360" src="//www.youtube.com/embed/YTEqFzrfVss?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
 # Deployment
 
 The integration can either deploy a packaged WAR file or an exploded WAR file. In order to deploy packaged WAR file, it can be specified using one of the deployment mechanisms (UI/CLI/Programmatic, see more [here](./deploying-onto-the-service-grid.html#deployDirections)). When deploying a WAR file, it goes through the following steps until it gets to the GSC:
