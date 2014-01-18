@@ -16,7 +16,7 @@ parent: xap-tutorials.html
 =============================================================
 {% endcomment %}
 
-**Summary:** {% excerpt %}This tutorial explains how to build your first GigaSpaces Application in 4 easy steps, from basic API usage to scaling your application and making it highly available{% endexcerpt %}
+**Summary:** {% excerpt %}This tutorial explains how to build your first GigaSpaces Application in 4 easy steps, from basic API usage to scaling your application and making it highly available.{% endexcerpt %}
 
 {% comment %}
 =============================================================
