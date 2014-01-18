@@ -19,6 +19,8 @@ OpenSpaces comes with support for executing tasks in a collocated asynchronous m
 The following [example](/sbp/map-reduce-pattern---executors-example.html) demonstrates how to use the task execution API
 {% endtip %}
 
+<iframe width="640" height="360" src="//www.youtube.com/embed/n7P4rnQN1gw?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+
 # Task API
 
 The `Task` interface is defined as follows:
