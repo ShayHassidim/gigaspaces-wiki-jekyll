@@ -23,6 +23,8 @@ The `SQLQuery` class is used to query the space using SQL-like syntax. The query
 {% endcolumn %}
 {% endsection %}
 
+<iframe width="640" height="360" src="//www.youtube.com/embed/jC57mId3SMg?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
 # Usage Examples
 
 An `SQLQuery` is composed from the **type** of entry to query and an **expression** in a SQL syntax.
