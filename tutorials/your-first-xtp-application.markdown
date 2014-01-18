@@ -28,6 +28,7 @@ parent: xap-tutorials.html
 
 {% section %}
 
+<iframe width="640" height="360" src="//www.youtube.com/embed/I2s8jg_Gufs?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
 ## Before You Begin - Set Up Your Environment
 
 If you would like to run the tutorial sample application, [download GigaSpaces and set up your development environment](./setting-up-your-ide-to-work-with-gigaspaces.html).
