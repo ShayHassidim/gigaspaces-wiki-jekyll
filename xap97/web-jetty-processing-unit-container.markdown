@@ -21,6 +21,9 @@ An OpenSpaces web processing unit can use [Jetty](http://www.eclipse.org/jetty/)
 See the [http Session Management](./http-session-management.html) for details about clustering the Jetty HTTP session.
 {% endtip %}
 
+
+<iframe width="640" height="360" src="//www.youtube.com/embed/YTEqFzrfVss?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
 # Jetty Instance Handling
 
 Jetty itself is configured using Spring, and allows you to control all aspects of both the Jetty instance created, and the web application context. There are two flavors of how Jetty instances are created (by default). The first is the **plain** mode, where a Jetty instance is created for each web processing unit instance running within a GSC. The second is the **shared** mode, where a single Jetty instance is created, and shared between all the different web processing unit instances running on the same GSC. A custom Jetty instantiation and handling can also be configured.
