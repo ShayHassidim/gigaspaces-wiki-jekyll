@@ -17,6 +17,8 @@ It is highly recommended that you [get yourself familiar with JPA](http://downlo
 It is also recommended that you take the [XAP PetClinic JPA Tutorial](/tutorials/your-first-jpa-application.html) which describes how a standard JPA application (the Spring PetClinic) can be adapted to XAP JPA and deployed on to the XAP runtime environment
 {% endinfo %}
 
+<iframe width="640" height="360" src="//www.youtube.com/embed/YRbzC_89G5Q?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+
 # GigaSpaces JPA Configuration
 
 ### OpenJPA
