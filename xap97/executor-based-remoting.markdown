@@ -15,6 +15,7 @@ Executor based remoting uses [Executors](./task-execution-over-the-space.html) t
 
 ![Executor.jpg](/attachment_files/Executor.jpg)
 
+<iframe width="640" height="360" src="//www.youtube.com/embed/-07-0PXUoeM?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
 # The executor-proxy
 
 The `executor-proxy` should be created at the client side to interact with the remote service. It can be created via Spring namespace , Sppring Bean or via API .
