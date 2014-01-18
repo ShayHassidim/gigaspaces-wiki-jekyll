@@ -32,7 +32,7 @@ There are two methodologies for developing interoperable solutions:
 
 There are pros and cons for each alternative. Here are some points to help you decide which methodology is best for you:
 
-- If you need a c++ version of the class, you have to write the `gs.xml` file to generate the c++ code.
+- If you need a C++ version of the class, you have to write the `gs.xml` file to generate the c++ code.
 - If you're getting started with interoperability, you can use the code generator as a learning tool to review interoperable classes in all platforms.
 - The code generation tool does not support some of the advanced features in .NET. If you have a need for these features, it is recommended to use the generator to get started, and manually edit the generated code. In this case you need to be careful when changing the class, since regenerating the code might override your manual changes.
 
@@ -49,5 +49,6 @@ Please refer to the [C++ Code Generation Guidelines](./cpp-api-code-generator.ht
 {% endtabcontent %}
 {% endinittab %}
 
+<iframe width="640" height="360" src="//www.youtube.com/embed/DlVohFGdqg8?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
 {%children%}
 
