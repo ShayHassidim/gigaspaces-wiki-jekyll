@@ -12,6 +12,8 @@ parent: administration-and-monitoring-api.html
 
 The alert mechanism provides the ability to receive alerts on various problematic conditions at runtime by using the [Administration and Monitoring API](./administration-and-monitoring-api.html). The alerts give indication for the "health state" of the system.
 
+<iframe width="640" height="360" src="//www.youtube.com/embed/2jI6Z1z4UrU?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+
 {% info title=Runtime Model %}
 The alerts rules are running within the `Admin` instance which the user created. GigaSpaces does not run an alert service that is running behind the scenes. If you would like to register for alerts in your production system, the recommended way to do it is to deploy your alert listener to the GigaSpaces [The Runtime Environment](./the-runtime-environment.html) in the form of a [processing unit](./the-processing-unit-structure-and-configuration.html).
 {% endinfo %}
