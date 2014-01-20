@@ -20,8 +20,10 @@ The Admin API provides a way to administer and monitor all of GigaSpaces service
 {%endcolumn%}
 {%endsection%}
 
+<iframe width="640" height="360" src="//www.youtube.com/embed/j3FfHBqtj1o?feature=player_embedded" frameborder="0" allowfullscreen></iframe>
+
 {% tip %}
-You can use the [GigaSpaces Universal Deployer](/sbp/universal-deployer.html) to deploy complex multi processing unit applications.
+You can use the [GigaSpaces Universal Deployer](/sbp/universal-deployer.html) to deploy complex multi-processing unit applications. Its is also a good example how to use the Admin API.
 {% endtip %}
 
 Before diving into the Admin API, here are some code examples showing how the Admin API can be used to display information on the of currently deployed services / components:
