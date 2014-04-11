@@ -30,7 +30,7 @@ The following parameters can be defined:
 |:-----|:------------|
 | Protocol | `[jini](java)`{% wbr %}- Jini -- Remote access using Jini for lookup{% wbr %}- Java -- Local (embedded) access |
 | Lookup Service Host name/IP | The machine host name/IP running the lookup service. May be \* when Jini is used as a protocol. In this case the space is located using multicast or unicast with search path. |
-| Port | The Jini lookup port. If no port is specified the default port (10098) will be used |
+| Port | The Jini lookup port. If no port is specified the default port will be used. Each XAP major release have a different default port. XAP 9 using 4174 as the default port|
 | Space Container Name | The name of the space container that holds the space. May be \* when Jini is used as a protocol. In this case the container name will be ignored when performing lookup and the space will be searched regardless of the container that holds it. |
 | Space Name | The space name to search. The same name defined when space has been created via the Space browser or the `createSpace` utility. |
 | [Properties String](#url properties) | (Optional) named value list of special properties. |
