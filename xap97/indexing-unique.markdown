@@ -1,6 +1,6 @@
 ---
 layout: post97
-title:  Unique
+title:  Unique Index
 categories: XAP97
 parent: indexing-overview.html
 weight: 400
