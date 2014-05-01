@@ -3,7 +3,7 @@ layout: post97
 title:  SqlQuery
 categories: XAP97NET
 parent: querying-the-space.html
-weight: 500
+weight: 500take
 ---
 
 {%summary%}{%endsummary%}
@@ -27,13 +27,13 @@ Note that the expression is equivalent to the WHERE part of a query. The FROM pa
 
 #### Example 2
 
-Take up to **100** entries of type **Person** whose **Age** is greater than or equal to **21**, AND whose **FirstName** is **John**.
+Read up to **100** entries of type **Person** whose **Age** is greater than or equal to **21**, AND whose **FirstName** is **John**.
 
 {% highlight csharp %}
 SqlQuery<Person> query = new SqlQuery<Person>("Age >= ? AND FirstName = ?");
 query.SetParameter(1, 21);
 query.SetParameter(2, "John");
-Person[] persons = proxy.TakeMultiple<Person>(query, 100);
+Person[] persons = proxy.ReadMultiple<Person>(query, 100);
 {% endhighlight %}
 
 This time instead of specifying the values directly in the expression we've used question marks to denote expression variables and parameters to specify the values for those variables.
