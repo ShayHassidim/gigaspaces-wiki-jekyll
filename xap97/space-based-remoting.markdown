@@ -5,9 +5,9 @@ categories: XAP97
 parent: space-based-remoting-overview.html
 weight: 100
 ---
-
-{%comment%}
 {% summary %}Remoting allows you to use remote invocations of POJO services, with the space as the transport layer.{% endsummary %}
+{%comment%}
+
 
 # Overview
 {%endcomment%}
