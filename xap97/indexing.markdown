@@ -6,7 +6,7 @@ parent: indexing-overview.html
 weight: 50
 ---
 
-{% summary %}{% endsummary %}
+{% summary %}Using indexes to improve query performance.{% endsummary %}
 
 {%comment%}
 {% summary %} Using indexes to improve query performance. {% endsummary %}
