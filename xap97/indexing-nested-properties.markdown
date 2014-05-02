@@ -5,8 +5,9 @@ categories: XAP97
 parent: indexing-overview.html
 weight: 100
 ---
+{% summary %}Using indexes to improve query performance.{% endsummary %}
 
-
+# Overview
 An index can be defined on a nested property to improve performance of nested queries - this is highly recommended.
 
 Nested properties indexing uses an additional `@SpaceIndex` attribute - **`path()`**.
