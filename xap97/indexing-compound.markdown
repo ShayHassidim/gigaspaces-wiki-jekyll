@@ -5,7 +5,8 @@ categories: XAP97
 parent: indexing-overview.html
 weight: 300
 ---
-
+{% summary %}Using indexes to improve query performance.{% endsummary %}
+# Overview
 Compound indexes can be defined using annotations. The `CompoundSpaceIndex` and `CompoundSpaceIndexes` annotations should be used. The annotations are a type-level annotations.
 
 Example: Below a compound index with two segments using annotations. Both are properties at the root level of the space class:
