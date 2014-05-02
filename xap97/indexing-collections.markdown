@@ -5,7 +5,9 @@ categories: XAP97
 parent: indexing-overview.html
 weight: 200
 ---
+{% summary %}Using indexes to improve query performance.{% endsummary %}
 
+# Overview
 An index can be defined on a Collection property (java.util.Collection implementation) or Array. Setting such an index means that each of the Collection's or Array's items is indexed. Setting an index on a Collection / Array done using the SpaceIndex.path() attribute where a Collection / Array property should be followed by "\[\*\]".
 
 The following example shows how to define an index on a List of Integers:
