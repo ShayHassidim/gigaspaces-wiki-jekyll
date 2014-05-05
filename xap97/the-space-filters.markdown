@@ -1,6 +1,6 @@
 ---
 layout: post97
-title:  Filters
+title:  Space Filters
 categories: XAP97
 weight: 600
 parent: the-gigaspace-interface-overview.html
