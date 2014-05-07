@@ -7,8 +7,7 @@ weight: 100
 ---
 
 
-{% summary %} A MongoDB Space Persistency Solution {% endsummary %}
-
+{% summary %} MongoDB Space Persistency Solution {% endsummary %}
 
 
 # Overview
