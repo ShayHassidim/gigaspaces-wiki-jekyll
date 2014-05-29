@@ -6,11 +6,9 @@ parent: querying-the-space.html
 weight: 100
 ---
 
-{%comment%}
 {% summary %}Id Based query - Primary Key based retrieval{% endsummary %}
 
 # Overview
-{%endcomment%}
 
 The space can be queried for entries using [Template Matching](./query-template-matching.html) or [SQLQuery](./query-sql.html), but sometimes we know the exact id of the entry we need and prefer a faster solution. This is where id-based queries come handy.
 
