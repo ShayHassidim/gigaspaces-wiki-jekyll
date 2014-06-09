@@ -229,7 +229,7 @@ public class Person {
         this.lastName = lastName;
     }
 
-    @SpaceId
+    @SpaceId(autoGenerate=false)
     public Integer getSsn() {
         return ssn;
     }
