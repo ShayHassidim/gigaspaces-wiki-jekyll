@@ -202,7 +202,7 @@ namespace XapDemo
 {
     public class Person
     {
-        [SpaceID]
+        [SpaceID(AutoGenerate=false)]
         public int? Ssn { get; set; }
         public String FirstName { get; set; }
         public String LastName { get; set; }
