@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Archive Handler
+title:  MongoDB Archive Handler
 categories: XAP100
 parent: mongodb.html
 weight: 200
