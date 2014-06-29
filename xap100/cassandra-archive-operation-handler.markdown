@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Archive Handler
+title:  Cassandra Archive Handler
 categories: XAP100
 parent: cassandra.html
 weight: 200
