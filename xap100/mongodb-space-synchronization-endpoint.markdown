@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Synchronization Endpoint
+title:  MongoDB Synchronization Endpoint
 categories: XAP100
 parent: mongodb-space-persistency.html
 weight: 200
