@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Data Source
+title:  MongoDB Data Source
 categories: XAP100
 parent: mongodb-space-persistency.html
 weight: 100
