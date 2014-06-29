@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Synchronization Endpoint
+title:  Cassandra Synchronization Endpoint
 categories: XAP100
 parent: cassandra-space-persistency.html
 weight: 200
