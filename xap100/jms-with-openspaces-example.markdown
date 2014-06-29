@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Example
+title:  JMS Integration - Example
 categories: XAP100
 parent: messaging-support.html
 weight: 400
