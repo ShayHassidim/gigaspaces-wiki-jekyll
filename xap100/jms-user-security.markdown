@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Security
+title:  JMS Integration - Security
 categories: XAP100
 parent: jms-advanced.html
 weight: 300
