@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Advanced Options
+title:  JMS Integration - Advanced Options
 categories: XAP100
 parent: messaging-support.html
 weight: 700
