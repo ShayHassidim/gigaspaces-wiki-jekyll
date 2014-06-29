@@ -1,6 +1,6 @@
 ---
 layout: post100
-title: Overview
+title: Space Based Remoting - Overview
 categories: XAP100
 parent: space-based-remoting-overview.html
 weight: 100
