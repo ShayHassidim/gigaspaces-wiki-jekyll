@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Overview
+title:  Multi Site LAN Replication - Overview
 categories: XAP100
 parent: multi-site-replication-overview.html
 weight: 50
