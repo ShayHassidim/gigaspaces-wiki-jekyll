@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Scripting Executor
+title:  Scala Scripting Executor
 categories: XAP100
 parent: scala.html
 weight: 400
