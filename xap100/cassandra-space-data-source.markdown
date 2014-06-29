@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Data Source
+title:  Cassandra Data Source
 categories: XAP100
 parent: cassandra-space-persistency.html
 weight: 100
