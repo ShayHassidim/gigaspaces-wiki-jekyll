@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  Transactions
+title:  JMS Integration - Transactions
 categories: XAP100
 parent: jms-advanced.html
 weight: 200
