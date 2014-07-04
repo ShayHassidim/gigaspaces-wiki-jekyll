@@ -1,14 +1,10 @@
 ---
 layout: post97
-title:  Space API
+title:  Space C++ API Usage Example
 categories: XAP97
 parent: cpp-api-examples.html
 weight: 100
 ---
-
-
-
-
 
 
 The API Usage Example demonstrates using the GigaSpaces C++ API to perform space operations.
