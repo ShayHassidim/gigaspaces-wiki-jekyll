@@ -1,6 +1,6 @@
 ---
 layout: post100
-title:  The Space Interface
+title:  The Space CPP Interface
 categories: XAP100
 parent: xap-cpp.html
 weight: 200
@@ -8,9 +8,7 @@ weight: 200
 
 {% summary   %}{% endsummary %}
 
-
 The `SpaceProxy` is the primary C++ interface that allows you to connect to the space and perform space operations. The basic space operations include the following:
-
 
 - **write** -- writes an object into the space.
 - **read** -- reads an object from the space that matches a given template.
