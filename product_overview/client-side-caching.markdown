@@ -41,6 +41,23 @@ In some cases where the relevant data set size fits a single JVM (64 Bit JVM may
 
 With the above architecture the client or the remote service have a local cache/view proxy that is maintaining a data set that its master copy distributed across the different partitions. In such a case , `readbyId` or `readByIds` calls will be VERY fast since these are actually a local call (semi-reference object access) that does not involve network utilization or serialization.
 
+With the `pu.xml` example below we will have all `com.test.MySpaceClass` objects that may be distributed across all `dataGrid` partitions copied also into a local view running within each PU instance. Every change with these objects (insert, update, remove) will be delegated also to all local view instances running within each PU instance (primary / backup). See how the local view is configured within the pu.xml:
+
+{% highlight xml %}
+<os-core:space id="space" url="/./dataGrid">
+</os-core:space>
+
+<os-core:space id="clusteredSpace" url="jini://*/*/dataGrid" />
+
+<os-core:local-view id="localViewSpace" space="clusteredSpace">
+	<os-core:view-query class="com.test.MySpaceClass" where=""/>			
+</os-core:local-view>
+
+<os-core:giga-space id="localView" space="localViewSpace"/>
+
+{% endhighlight %}
+
+
 ## When to use a local view?
 
 Use local view in case you can encapsulate the information you need to distribute in predefined query(ies). The local view is based on the replication mechanism and ensures your data synchronization and consistency with the remote space. The local view is read only.
