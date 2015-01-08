@@ -175,7 +175,7 @@ Distributed transaction participants data will be processed individually if 10 s
 |dist-tx-consolidation-failure-action|commit|
 
 {% info %}
-Note that by setting the "cluster-config.groups.group.repl-policy.processing-type" property to "global-source" all reliable asynchronous replication targets for that space will work in non-distributed transaction consolidation mode (For example, a Mirror would be in-non distributed transaction consolidation mode as well.)
+Note that by setting the `cluster-config.groups.group.repl-policy.processing-type` property to `global-source` all reliable asynchronous replication targets for that space will work in non-distributed transaction consolidation mode (For example, a Mirror would be in-non distributed transaction consolidation mode as well.)
 {% endinfo %}
 
 {% note %}
@@ -183,8 +183,7 @@ Consolidation failure can occur under normal circumstances, if the target gatewa
 {%endnote%}
 
 {% note %}
-Due to the above, setting both dist-tx-wait-timeout-millis and dist-tx-wait-for-opers to unlimited (or very high value) is risky and may cause replication backlog accumulation due to a
-packet which is unconsolidated and waits for consolidation which may never occur.
+Due to the above, setting both `dist-tx-wait-timeout-millis` and `dist-tx-wait-for-opers` to unlimited (or very high value) is risky and may cause replication backlog accumulation due to a packet which is unconsolidated and waits for consolidation which may never occur.
 {%endnote%}
 
 # Master-Slave Topology
