@@ -220,15 +220,15 @@ See more details about the [Space URL](./the-space-configuration.html).
 
 Optional settings you may include as part of the processing unit declaration:
 
-\--Space properties settings
-\--Transaction Manager settings
-\--SLA settings such as cluster topology
-\--Local cache/view settings
-\--External Data Source settings
-\--Security settings
-\--Space Filter settings
-\--Replication Filter settings
-\--Space Mode Context Loader settings
+-Space properties settings
+-Transaction Manager settings
+-SLA settings such as cluster topology
+-Local cache/view settings
+-External Data Source settings
+-Security settings
+-Space Filter settings
+-Replication Filter settings
+-Space Mode Context Loader settings
 
 Here is an example for a processing unit with a c++ worker deployed, using a clustered SLA-driven container that is running in a partitioned topology with one backup:
 
