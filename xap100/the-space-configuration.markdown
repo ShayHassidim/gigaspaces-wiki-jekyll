@@ -369,7 +369,7 @@ Here is an example of the `GigaSpace` Bean:
 
 ### Examples
 
-Here are some examples on how to configure the Space URL and the proxy:
+Here are some examples how to configure the proxy:
 
 Declaring a remote space with a transaction manager:
 
