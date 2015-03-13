@@ -121,6 +121,6 @@ The following table lists the supported options:
 
 When running with LRU cache policy and `SpaceDataSource`/`SpaceSynchronizationEndpoint` setup:
 
-- Lazily loaded objects (as a result of a cache miss) and object loaded via initial data load are not replicated to the backup or replica space.
+- Lazily loaded objects (as a result of a cache miss) and objects loaded via initial data load are not replicated to the backup or replica space.
 - Write operations and update operations are not replicated when running in distributed DB mode.
 - Evicted objects are replicated when using the take operation with the `EVICT_ONLY` modifier.
