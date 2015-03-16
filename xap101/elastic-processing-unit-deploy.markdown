@@ -34,7 +34,7 @@ The EPU deployment requires two important properties:
 {% endtabcontent %}
 {% tabcontent CLI %}
     {% highlight bash %}
-    deploy-elastic-space -cmdargs "-Xms2g,-Xmx10g" -max-memory-capacity 20g mySpace
+    gs> deploy-elastic-space -cmdargs "-Xms2g,-Xmx10g" -max-memory-capacity 20g mySpace
     {% endhighlight %}
 {% endtabcontent %}
 {% endinittab %}
