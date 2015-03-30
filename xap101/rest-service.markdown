@@ -57,8 +57,7 @@ or
 | lookup-groups | optional | The lookup groups to be used when looking for the specified space. {% wbr %} A comma separated list of group names. {% wbr %}Use with space-name attribute only. |
 | lookup-locators | optional | The lookup locators to be used when looking for the specified space. {% wbr %} A comma separated list of host:port. {% wbr %}Use with space-name attribute only. |
 
-*giga-space and space-name attributes can not be used together.
-
+*`giga-space` and `space-name` attributes are mutually exclusive. You cannot use both.
 
 #Date Support
 
