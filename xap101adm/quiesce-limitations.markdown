@@ -1,6 +1,6 @@
 ---
 layout: post101
-title:  Limitations and Considerations
+title:  Considerations
 categories: XAP101ADM
 parent: quiescemode.html
 weight: 300
@@ -8,7 +8,7 @@ weight: 300
 
 
 
-The following limitations and open issues apply to Quiesce Mode:
+Note the following considerations with the Quiesce Mode:
 
 1. The processing unit should be **intact** before triggering quiesce request.
 2. Though Quiesce handles processing unit restart, it is not resilient to sudden network disconnections (in XAP grid components machines) therefore it is possible that in rare conditions the quiesce request will have to be repeated manually by the user. <br> 
