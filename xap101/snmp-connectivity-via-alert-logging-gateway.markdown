@@ -34,9 +34,11 @@ The `AlertLoggingGateway` example project provided with the GigaSpaces distribut
 
 The **SnmpTrapTransmitter** is a XAP PU responsible for the generic Alert-to-Log bridging. It does that by listening to all alerts in its alert filter file. Any incoming alerts are simply writing to commons logging log. Notice that, being generic in nature, the SnmpTrapTransmitter can be reused without any changes in similar projects.
 SnmpTrapTransmitter exposes the following configuration parameters:
-**AlertFileFilter** - the name of Alert filter xml file used to filter Alerts to be logged
-**loggerName** - the name of the logger to be created
-**group** - the XAP group for which the Alert listener will be configured
+
+- **AlertFileFilter** - the name of Alert filter xml file used to filter Alerts to be logged.
+- **loggerName** - the name of the logger to be created.
+- **group** - the XAP group for which the Alert listener will be configured.
+ 
 
 {% highlight xml %}
   <bean id="SnmpTrapTransmitter" class="org.openspaces.example.alert.logging.snmp.SnmpTrapTransmitter" >
