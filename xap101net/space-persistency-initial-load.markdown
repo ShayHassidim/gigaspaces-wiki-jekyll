@@ -120,7 +120,7 @@ public override IDataEnumerator InitialLoad()
 	var clusterInfo = ProcessingUnitContainer.Current.ClusterInfo;
 	var queries = new string[]
 	{
-		"from MyEntry where Foo > 50 AND RoutingProperty % " + clusterInfo.NumberOfInstances + " = " + clusterInfo.InstanceId
+		"from MyEntry where Foo > 50 AND RoutingProperty % " + clusterInfo.NumberOfInstances + " = " + (clusterInfo.InstanceId - 1)
 	};
 	var enumerators = new List<IDataEnumerator>();
 	foreach (var query in queries)
