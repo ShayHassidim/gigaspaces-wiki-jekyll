@@ -172,7 +172,7 @@ public class MyClass {
 	
     @SpaceInitialLoadQuery
     public String initialLoadQuery(ClusterInfo clusterInfo) {
-        return "foo > 50 AND routingProperty % " + clusterInfo.getNumberOfInstances() + " = " + clusterInfo.getInstanceId();
+        return "foo > 50 AND routingProperty % " + clusterInfo.getNumberOfInstances() + " = " + (clusterInfo.getInstanceId() -1 );
     }
 }
 {% endhighlight %}
