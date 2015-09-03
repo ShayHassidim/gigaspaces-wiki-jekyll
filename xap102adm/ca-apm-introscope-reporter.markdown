@@ -291,7 +291,8 @@ Metric value of `LongCounter` type must carry integer value. Unfortunately, Intr
 
 # Development environment installation steps
 
-Steps below describe how to set up development environment to start working on this plugin. Filed required:
+Steps below describe how to set up development environment to start working on this plugin. Files required:
+
 - EPAgent9.6.0.0unix.tar,
 - introscope9.6.0.0otherUnix.jar,
 - osgiPackages.v9.6.0.0.unix.tar
